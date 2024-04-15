@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,400;1,100;1,600&family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-image: url(../img/back.jpg);
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    position: relative; 
+}
+
+#board {
+    
+    background: linear-gradient(160deg, #6cdadc, #97d815);
+    width: 90vmin;
+    height: 92vmin;
+    margin-top: 30px;
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+}
+
+.head {
+    background: linear-gradient(45deg, rgb(4, 37, 19), rgb(104, 6, 6));
+    border-radius: 8px;
+    border: 0.30vmin solid black;
+    transform: scale(1.04);
+}
+
+.food {
+    background: linear-gradient(135deg, rgb(245, 11, 11), rgb(38, 192, 234));
+    border-radius: 8px;
+    border: 0.25vmin solid rgb(7, 24, 11);
+}
+
+.snaketell {
+    background-color: rgb(5, 5, 5);
+    border: 0.25vmin solid rgb(61, 64, 62);
+    border-radius: 10px;
+}
+
+#scoreBox {
+    position: absolute;
+    font-weight: bold;
+    font-size: 30px;
+    top: 20px;
+    right: 20px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#highscoreBox {
+    position: absolute;
+    font-weight: bold;
+    font-size: 30px;
+    top: 70px;
+    right: 20px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+@media only screen and (max-width: 960px) {
+    #scoreBox {
+        position: static; 
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    #highscoreBox {
+        position: static; 
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
